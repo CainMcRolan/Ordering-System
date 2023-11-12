@@ -1,0 +1,873 @@
+body {
+   background-color:rgb(240, 240, 240);
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: 'Roboto', sans-serif;
+}
+
+::-webkit-scrollbar {
+   width: 0;
+   height: 0;
+ }
+
+/* HEADING*/
+.header {
+   height: 90px;
+   background-color: #2a2828;
+   border: none;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+}
+
+.logo {
+   margin-right: 900px;
+   height: 200px;
+   width: 200px;
+}
+
+.signin {
+   display: inline-block;
+   outline: none;
+   cursor: pointer;
+   font-size: 12px;
+   line-height: 1;
+   border-radius: 500px;
+   transition-property: background-color,border-color,color,box-shadow,filter;
+   transition-duration: .3s;
+   border: 1px solid transparent;
+   letter-spacing: 2px;
+   min-width: 80px;
+   text-transform: uppercase;
+   white-space: normal;
+   font-weight: 700;
+   text-align: center;
+   padding: 8px 20px;
+   color: #fff;
+   background-color: rgb(255, 21, 0);
+   transition: all 0.3s linear;
+   margin-right: 10px;
+}
+.signin:hover{
+    transform: scale(1.05, 1.05);
+    background-color: #ff0000;
+}
+
+.signup {
+   display: inline-block;
+   outline: none;
+   cursor: pointer;
+   font-size: 12px;
+   line-height: 1;
+   border-radius: 500px;
+   transition-property: background-color,border-color,color,box-shadow,filter;
+   transition-duration: .3s;
+   border: 1px solid transparent;
+   letter-spacing: 2px;
+   min-width: 80px;
+   text-transform: uppercase;
+   white-space: normal;
+   font-weight: 700;
+   text-align: center;
+   padding: 8px 20px;
+   color: #000000;
+   background-color: #ebe3e3;
+   transition: all 0.3s linear;
+   margin-right: 10px;
+}
+.signup:hover{
+    transform: scale(1.05, 1.05);
+    background-color: #ffffff;
+}
+
+
+/* NAVIGATION BAR */
+.nav {
+   width: 1359px;
+   border: none;
+   height: 35px;
+   display: flex;
+   align-items: center;
+   background-color: white;
+   box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.75);
+}
+.navbar {
+   display: flex;
+   width: 1000px;
+}
+.navbar li {
+   list-style-type: none;
+}
+.navbar a {
+   text-decoration: none;
+   color: rgb(72, 66, 66);
+   font-size: 12px;
+   font-weight:bold;
+   padding: 11px 15px;
+   transition: 0.5s ease;
+}
+
+.navbar a:hover {
+   color: rgb(255, 255, 255);
+   font-size: 13px;
+   transition:  0.5s ease;
+   background-color: black;
+}
+
+
+/* MAIN BODY */
+
+.main {
+   border: 1px solid black;
+   height: 700px; 
+   width: 1358px;
+   display: flex;
+}
+
+
+/* FOOD SELECTION */
+.left {
+   width: 250px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+
+.search {
+   width: 175px;
+   margin-left: 35px;
+   margin-top: 20px;
+   height: 15px;
+   border-radius: 6px;
+   border: 1px solid rgb(210, 201, 201);
+   background-color: white;
+   padding: 10px;
+}
+
+.selection {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 190px;
+   border: 1px solid rgb(210, 201, 201);
+   margin-right: 30px;
+   margin-left: 63px;
+   border-radius: 6px;
+   margin-top: 20px;
+   background-color: white;
+   
+}
+
+.food {
+   width: 180px;
+   border: none;
+   background-color: rgb(255, 255, 255);
+   height: 30px;
+   cursor: pointer;
+   font-family: 'Roboto', sans-serif;
+   font-weight: bold;
+   font-size: 12px;
+   transition: 0.5s ease;
+   margin-bottom: 5px;
+   color: rgb(72, 66, 66);
+}
+
+.food:hover {
+   background-color: #333;
+   color: white;
+}
+
+.menu {
+   width: 180px;
+   background-color: rgb(255, 255, 255);
+   height: 20px;
+   cursor: pointer;
+   font-family: 'Roboto', sans-serif;
+   font-weight: bold;
+   font-size: 13px;
+   transition: 0.5s ease;
+   margin-bottom: 5px;
+   color: rgb(46, 44, 44);
+   display: flex;
+   justify-content: center;
+}
+
+
+/* DISPLAY FOOD SELECTION */
+.ads {
+   width: 800px;
+   max-height: 230px;
+   margin-top: 20px;
+  
+}
+.ads img {
+   width: 800px;
+   height: 230px;
+   border: 1px solid rgb(210, 201, 201);
+   display: inline-block;
+   border-radius: 1em;
+   
+}
+
+
+@keyframes slide {
+   0% {
+       left: 0;
+   }
+   25% {
+       left: 0;
+   }
+   50% {
+       left: -100%;
+   }
+   75% {
+       left: -100%;
+   }
+   100% {
+       left: 0;
+   } 
+}
+
+.display {
+   border: 1px solid rgb(210, 201, 201);
+   width: 800px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 10px;
+   border-radius: 1em;
+   overflow:auto;
+}
+
+.displaymain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 790px;
+  height: 400px;
+}
+
+/* PIZZAS */
+
+.pizza-pizza1 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(pizza1.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+.pizza-pizza2 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(pizza2.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+.pizza-pizza3 {
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(pizza3.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+.pizza-pizza4 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(pizza4.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+.pizza-pizza5 {
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(pizza5.png);
+   border-radius: 1em;
+   transition: all .5s ease;
+   background-size: cover;
+}
+.pizza-pizza6 {
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(pizza6.png);
+   border-radius: 1em;
+   transition: all .3s ease;
+   background-size: cover;
+}
+
+[class^="pizza-"]:hover, [class^="burger-"]:hover,[class^="fries-"]:hover,[class^="steak-"]:hover,[class^="drinks-"]:hover, [class^="dessert-"]:hover {
+   background-color: #333;
+   transform: scale(1.03);
+   transition: all .5s ease;
+   color: white;
+   border: 2px solid#333 ;
+}
+
+[class^="pizza-"]:active, [class^="burger-"]:active,[class^="fries-"]:active,[class^="steak-"]:active,[class^="drinks-"]:active, [class^="dessert-"]:active  {
+   transform: scale(1.3);
+   transition: all .5s ease;
+   border: 2px solid black;
+}
+
+
+/* BURGERS */
+
+.burger-burger1 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(burger1.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.burger-burger2 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(burger2.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+.burger-burger3 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(burger3.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+.burger-burger4 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(burger4.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+.burger-burger5 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(burger5.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.burger-burger6 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(burger6.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+
+/* FRIES */
+.fries-fries1 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(fries1.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.fries-fries2 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(fries2.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.fries-fries3 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(fries3.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.fries-fries4 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(fries4.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.fries-fries5 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(fries5.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.fries-fries6 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(fries6.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+/* STEAK */
+.steak-steak1 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(steak1.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.steak-steak2 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(steak2.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.steak-steak3 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(steak3.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.steak-steak4 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(steak4.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.steak-steak5 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(steak5.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.steak-steak6 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(steak6.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+
+/* DRINKS  */
+.drinks-drink1 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(drink1.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.drinks-drink2 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(drink2.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.drinks-drink3 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(drink3.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.drinks-drink4 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(drink4.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.drinks-drink5 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(drink5.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.drinks-drink6 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(drink6.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+/* DESSERT */
+.dessert-dessert1 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(dessert1.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.dessert-dessert2 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(dessert2.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.dessert-dessert3 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(dessert3.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.dessert-dessert4 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(dessert4.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.dessert-dessert5 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(dessert5.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+.dessert-dessert6 { 
+   border: 1px solid rgb(210, 201, 201);
+   cursor: pointer;
+   width: 260px;
+   height: 180px;
+   background-image: url(dessert6.png);
+   border-radius: 1em;
+   background-size: cover;
+   transition: all .5s ease;
+}
+
+/* DISPLAY ORDER DETAILS */
+
+.right {
+   width: 250px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   margin-left: 15px;
+}
+
+.order {
+   display: flex;
+   justify-content: center;
+}
+
+.ordermain {
+   overflow: auto;
+   height: 540px;
+}
+
+.cart {
+   width: 250px;
+   height: 40px;
+   border: 1px solid black;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid rgb(210, 201, 201);
+   background-color: rgb(255, 255, 255);
+   font-family: 'Roboto', sans-serif;
+   font-weight: bold;
+   font-size: 15px;
+   transition: 0.5s ease;
+   color: rgb(72, 66, 66);
+   border-radius: 5px;
+   margin-top: 25px;
+}
+
+.orderitem {
+   border: 1px solid rgb(210, 201, 201);
+   background-color: rgb(255, 255, 255);
+   height: 70px;
+   width: 240px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: bold;
+   font-size: 11px;
+   transition: 0.5s ease;
+   margin-bottom: 5px;
+   color: rgb(72, 66, 66);
+   border-radius: 5px;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   padding: 0px 5px;
+}
+
+.orderitem:hover {
+   cursor: pointer;
+   background-color: black;
+   color: white;
+}
+
+.itemprice {
+   width: 30px;
+}
+
+.qty {
+  padding-left: 15px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.amount {
+   padding-left: 10px;
+}
+
+.remove {
+   padding-left: 10px;  
+   background-color: rgb(235, 19, 19);
+   border-radius: 50%;
+   border: none;
+   color: white;
+   width: 25px;
+   height: 25px;
+   cursor: pointer;
+   transition: 0.3s ease;
+   font-size: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: cen;
+}
+
+.remove:hover {
+   background-color: #ff0000;
+   transform: scale(1.2);
+}
+
+.total {
+   position: absolute;
+   height: 30px;
+   top: 739px;
+   right: 145px;
+   border: 1px solid rgb(210, 201, 201);
+   background-color: rgb(255, 255, 255);
+   font-family: 'Roboto', sans-serif;
+   font-weight: bold;
+   font-size: 13px;
+   transition: 0.5s ease;
+   color: rgb(72, 66, 66);
+   border-radius: 5px;
+   padding: 0px 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-right: 5px;
+}
+
+.order-food {
+   position: absolute;
+   top: 738px;
+   right: 40px;
+   text-decoration: none;
+   color: white;
+   background-color: rgb(27, 123, 27);
+   width: 100px;
+   height: 30px;
+   justify-content: center;
+   display: flex;
+   align-items: center;
+   border: 1px solid green;
+   border-radius: 3em;
+   transition: all 0.5s ease;
+   font-size: 14px;
+   font-weight: bold;
+}
+
+.order-food:hover {
+   background-color: rgb(23, 185, 23);
+
+}
+
+@font-face {
+   font-family: 'McDo';
+   src: url(Mcdofont.otf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+
+@media only screen and (max-width: 1024px) {
+   /* Styles for iPad landscape orientation */
+
+   /* Update the header and navigation bar styles for smaller screens */
+   .header {
+      height: 60px;
+   }
+
+   .logo {
+      margin-right: 300px;
+      height: 150px;
+      width: 150px;
+   }
+
+   .signin, .signup {
+      font-size: 10px;
+      padding: 6px 15px;
+   }
+
+   .nav {
+      width: 100%;
+   }
+
+   .navbar {
+      width: 800px;
+   }
+
+   .navbar a {
+      font-size: 10px;
+      padding: 8px 10px;
+   }
+
+   /* Update the main body styles */
+   .main {
+      width: 100%;
+   }
+
+   .left, .right {
+      width: 100%;
+   }
+
+   /* Update the display food selection styles */
+   .ads {
+      width: 100%;
+   }
+
+   .displaymain {
+      width: 100%;
+   }
+
+   /* Update the individual food item styles (e.g., pizza, burger, etc.) */
+   .pizza-pizza1, .burger-burger1, .fries-fries1, .steak-steak1, .drinks-drink1, .dessert-dessert1 {
+      width: 100%;
+   }
+}
+
