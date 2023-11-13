@@ -22,7 +22,7 @@ body {
 }
 
 .logo {
-   margin-right: 900px;
+   margin-right: 1050px;
    height: 200px;
    width: 200px;
 }
@@ -84,7 +84,7 @@ body {
 
 /* NAVIGATION BAR */
 .nav {
-   width: 1359px;
+   width: 1920px;
    border: none;
    height: 35px;
    display: flex;
@@ -121,14 +121,14 @@ body {
 .main {
    border: 1px solid black;
    height: 700px; 
-   width: 1358px;
+   width: 1960px;
    display: flex;
 }
 
 
 /* FOOD SELECTION */
 .left {
-   width: 250px;
+   width: 300px;
    display: flex;
    align-items: center;
    flex-direction: column;
@@ -161,7 +161,7 @@ body {
 }
 
 .food {
-   width: 180px;
+   width: 190px;
    border: none;
    background-color: rgb(255, 255, 255);
    height: 30px;
@@ -180,7 +180,7 @@ body {
 }
 
 .menu {
-   width: 180px;
+   width: 190px;
    background-color: rgb(255, 255, 255);
    height: 20px;
    cursor: pointer;
@@ -197,13 +197,13 @@ body {
 
 /* DISPLAY FOOD SELECTION */
 .ads {
-   width: 800px;
+   width: 900px;
    max-height: 230px;
    margin-top: 20px;
   
 }
 .ads img {
-   width: 800px;
+   width: 900px;
    height: 230px;
    border: 1px solid rgb(210, 201, 201);
    display: inline-block;
@@ -232,7 +232,7 @@ body {
 
 .display {
    border: 1px solid rgb(210, 201, 201);
-   width: 800px;
+   width: 900px;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -246,7 +246,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  width: 790px;
+  width: 880px;
   height: 400px;
 }
 
@@ -255,8 +255,8 @@ body {
 .pizza-pizza1 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(pizza1.png);
    border-radius: 1em;
    background-size: cover;
@@ -265,8 +265,8 @@ body {
 .pizza-pizza2 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(pizza2.png);
    border-radius: 1em;
    background-size: cover;
@@ -275,8 +275,8 @@ body {
 .pizza-pizza3 {
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(pizza3.png);
    border-radius: 1em;
    background-size: cover;
@@ -285,8 +285,8 @@ body {
 .pizza-pizza4 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(pizza4.png);
    border-radius: 1em;
    background-size: cover;
@@ -295,8 +295,8 @@ body {
 .pizza-pizza5 {
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(pizza5.png);
    border-radius: 1em;
    transition: all .5s ease;
@@ -305,8 +305,8 @@ body {
 .pizza-pizza6 {
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(pizza6.png);
    border-radius: 1em;
    transition: all .3s ease;
@@ -333,8 +333,8 @@ body {
 .burger-burger1 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(burger1.png);
    border-radius: 1em;
    background-size: cover;
@@ -344,8 +344,8 @@ body {
 .burger-burger2 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(burger2.png);
    border-radius: 1em;
    background-size: cover;
@@ -354,8 +354,8 @@ body {
 .burger-burger3 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(burger3.png);
    border-radius: 1em;
    background-size: cover;
@@ -364,8 +364,8 @@ body {
 .burger-burger4 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(burger4.png);
    border-radius: 1em;
    background-size: cover;
@@ -374,8 +374,8 @@ body {
 .burger-burger5 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(burger5.png);
    border-radius: 1em;
    background-size: cover;
@@ -385,8 +385,8 @@ body {
 .burger-burger6 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(burger6.png);
    border-radius: 1em;
    background-size: cover;
@@ -398,8 +398,8 @@ body {
 .fries-fries1 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(fries1.png);
    border-radius: 1em;
    background-size: cover;
@@ -409,8 +409,8 @@ body {
 .fries-fries2 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(fries2.png);
    border-radius: 1em;
    background-size: cover;
@@ -420,8 +420,8 @@ body {
 .fries-fries3 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(fries3.png);
    border-radius: 1em;
    background-size: cover;
@@ -431,8 +431,8 @@ body {
 .fries-fries4 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(fries4.png);
    border-radius: 1em;
    background-size: cover;
@@ -442,8 +442,8 @@ body {
 .fries-fries5 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(fries5.png);
    border-radius: 1em;
    background-size: cover;
@@ -453,8 +453,8 @@ body {
 .fries-fries6 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(fries6.png);
    border-radius: 1em;
    background-size: cover;
@@ -465,8 +465,8 @@ body {
 .steak-steak1 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(steak1.png);
    border-radius: 1em;
    background-size: cover;
@@ -476,8 +476,8 @@ body {
 .steak-steak2 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(steak2.png);
    border-radius: 1em;
    background-size: cover;
@@ -487,8 +487,8 @@ body {
 .steak-steak3 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(steak3.png);
    border-radius: 1em;
    background-size: cover;
@@ -498,8 +498,8 @@ body {
 .steak-steak4 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(steak4.png);
    border-radius: 1em;
    background-size: cover;
@@ -509,8 +509,8 @@ body {
 .steak-steak5 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(steak5.png);
    border-radius: 1em;
    background-size: cover;
@@ -520,8 +520,8 @@ body {
 .steak-steak6 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(steak6.png);
    border-radius: 1em;
    background-size: cover;
@@ -533,8 +533,8 @@ body {
 .drinks-drink1 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(drink1.png);
    border-radius: 1em;
    background-size: cover;
@@ -544,8 +544,8 @@ body {
 .drinks-drink2 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(drink2.png);
    border-radius: 1em;
    background-size: cover;
@@ -555,8 +555,8 @@ body {
 .drinks-drink3 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(drink3.png);
    border-radius: 1em;
    background-size: cover;
@@ -566,8 +566,8 @@ body {
 .drinks-drink4 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(drink4.png);
    border-radius: 1em;
    background-size: cover;
@@ -577,8 +577,8 @@ body {
 .drinks-drink5 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(drink5.png);
    border-radius: 1em;
    background-size: cover;
@@ -588,8 +588,8 @@ body {
 .drinks-drink6 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(drink6.png);
    border-radius: 1em;
    background-size: cover;
@@ -600,8 +600,8 @@ body {
 .dessert-dessert1 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(dessert1.png);
    border-radius: 1em;
    background-size: cover;
@@ -611,8 +611,8 @@ body {
 .dessert-dessert2 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(dessert2.png);
    border-radius: 1em;
    background-size: cover;
@@ -622,8 +622,8 @@ body {
 .dessert-dessert3 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(dessert3.png);
    border-radius: 1em;
    background-size: cover;
@@ -633,8 +633,8 @@ body {
 .dessert-dessert4 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(dessert4.png);
    border-radius: 1em;
    background-size: cover;
@@ -644,8 +644,8 @@ body {
 .dessert-dessert5 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(dessert5.png);
    border-radius: 1em;
    background-size: cover;
@@ -655,8 +655,8 @@ body {
 .dessert-dessert6 { 
    border: 1px solid rgb(210, 201, 201);
    cursor: pointer;
-   width: 260px;
-   height: 180px;
+   width: 280px;
+   height: 190px;
    background-image: url(dessert6.png);
    border-radius: 1em;
    background-size: cover;
@@ -670,7 +670,7 @@ body {
    display: flex;
    align-items: center;
    flex-direction: column;
-   margin-left: 15px;
+   margin-left: 30px;
 }
 
 .order {
