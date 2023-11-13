@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="Mcdo.css">
+   <link rel="icon" type="image/x-icon" href="logo.png">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+   <link href="https://fonts.cdnfonts.com/css/agency-fb" rel="stylesheet">
+   <title>CAIN BBQHOUSE</title>
+</head>
+<body>
+   <header class="header">
+      <a href=""><img src="logo.png" alt="" class="logo"></a>
+      <button class="signin">SIGN IN</button>
+      <button class="signup">SIGN UP</button>
+   </header>
+   <nav class="nav">
+      <ol class="navbar">
+         <li><a href="#" title="Menu">MENU</a></li>
+         <li><a href="#" title="Cash on Delivery Only">PAYMENT METHODS</a></li>
+         <li><a href="#" title="Within Mataasnakahoy">DELIVERY ZONES</a></li>
+         <li><a href="#" title="8:00 - 20:00 EST">SERVICE HOURS</a></li>
+         <li><a href="#">FEEDBACK</a></li>
+         <li><a href="#">CONTACT</a></li>
+     </ol>
+   </nav>
+   <main class="main">
+      <!-- Food Selection -->
+      <div class="left">
+         <input type="text" placeholder="Search" class="search" id="searchInput" onkeydown="event.key === 'Enter' ? searchItems() : 0;">
+         <div class="selection">
+            <p class="menu">MENU <i style="margin-left: 5px;" class='bx bx-food-menu' ></i></p>
+            <button class="food pizza" onclick="pickOrder('pizza')">PIZZA <i  class='bx bxs-pizza' ></i></button>
+            <button class="food burger" onclick="pickOrder('burger')">BURGER <i class='bx bxs-data'></i> </button>
+            <button class="food fries" onclick="pickOrder('fries')">FRIES <i class='bx bx-menu' ></i></button>
+            <button class="food steak" onclick="pickOrder('steak')">STEAK <i class='bx bx-fork' ></i></button>
+            <button class="food drinks" onclick="pickOrder('drinks')" >DRINKS <i class='bx bx-coffee-togo'></i></button>
+            <button class="food dessert" onclick="pickOrder('dessert')">DESSERT <i class='bx bx-cake' ></i></button>
+         </div>
+      </div>
+    
+
+      <!-- Display Food Selection -->
+      <div class="middle">
+         <div class="ads">
+            <img src="ad1.png" alt="Advertisement1" class="ad1">
+         </div>
+         <div class="display" >
+            <div class="displaymain"></div>
+            <p class="" style="position: absolute;z-index: -1; top: 450px;">Unavailable, come back later!</p>
+          </div>
+      </div>
+      
+       <!-- Display Order Details -->
+      <div class="right">
+         <p class="cart">Your Cart</p>
+         <div class="order">
+            <div class="ordermain">
+               <div class="total">
+                  <p>Total Amount: $<span id="totalAmount">0.00</span></p>
+               </div>
+               <a href="mcdoorder.html" class="order-food">
+                  <p>Order</p>
+               </a>
+            </div>
+            </div>
+      </div>
+     
+   </main>
+
+   <script>
+   const foodSelection = {
+      pizza: {
+         pizza1: {
+            name: "Hawaiian",
+            price: 10.99,
+         },
+         pizza2: {
+            name: "New York", 
+            price: 11.99,
+         },
+         pizza3: {
+            name: "Italian", 
+            price: 12.99,
+         },
+         pizza4: {
+            name: "Neapolitan", 
+            price: 13.99,
+         },
+         pizza5: {
+            name: "Pepperoni", 
+            price: 14.99,
+         },
+         pizza6: {
+            name: "Sicilian", 
+            price: 15.99,
+         }
+      },
+      burger: {
+         burger1: {
+            name: 'Hamburger',
+            price: 5.99,
+         },
+         burger2: {
+            name: 'Turkeyburger',
+            price: 6.99,
+         },
+         burger3: {
+            name: 'Lambburger',
+            price: 7.99,
+         },
+         burger4: {
+            name: 'Cheeseburger',
+            price: 8.99,
+         },
+         burger5: {
+            name: 'Baconburger',
+            price: 9.99,
+         },
+         burger6: {
+            name: 'Chickenburger',
+            price: 10.99,
+         }
+      },
+      fries: {
+         fries1: {
+            name: 'Classic',
+            price: 3.99,
+         }, 
+         fries2: {
+            name: 'Waffle',
+            price: 4.99,
+         }, 
+         fries3: {
+            name: 'SweetPotato',
+            price: 5.99,
+         }, 
+         fries4: {
+            name: 'Crinkle',
+            price: 6.99,
+         }, 
+         fries5: {
+            name: 'Wedge',
+            price: 7.99,
+         }, 
+         fries6: {
+            name: 'Steak',
+            price: 8.99,
+         },
+      },
+      steak: {
+         steak1: {
+            name: 'Sirloin',
+            price: 10.99,
+         }, 
+         steak2: {
+            name: 'ChuckEye',
+            price: 15.99,
+         }, 
+         steak3: {
+            name: 'NYStrip',
+            price: 20.99,
+         }, 
+         steak4: {
+            name: 'Fillet',
+            price: 25.99,
+         }, 
+         steak5: {
+            name: 'Porterhouse',
+            price: 30.99,
+         }, 
+         steak6: {
+            name: 'Ribeye',
+            price: 35.99,
+         },
+      },
+      drinks: {
+         drink1: {
+            name: 'CocaCola',
+            price: 3.99,
+         },
+         drink2: {
+            name: 'Tea',
+            price: 4.99,
+         },
+         drink3: {
+            name: 'MilkTea',
+            price: 5.99,
+         },
+         drink4: {
+            name: 'Coffee',
+            price: 5.99,
+         },
+         drink5: {
+            name: 'MilkShake',
+            price: 6.99,
+         },
+         drink6: {
+            name: 'Lemonade',
+            price: 6.99,
+         }
+      },
+      dessert: {
+         dessert1: {
+            name: 'Cookies',
+            price: 3.99,
+         },
+         dessert2: {
+            name: 'IceCream',
+            price: 4.99,
+         },
+         dessert3: {
+            name: 'Waffles',
+            price: 5.99,
+         },
+         dessert4: {
+            name: 'Chocolate',
+            price: 6.99,
+         },
+         dessert5: {
+            name: 'Cupcakes',
+            price: 7.99,
+         },
+         dessert6: {
+            name: 'Cake',
+            price: 10.99,
+         }
+      }
+   };
+
+   const order = {};
+
+
+   function pickOrder(food) {
+      if (food === "pizza") { 
+         const display = document.querySelector('.displaymain');
+         display.innerHTML = '';
+
+         for (const key in foodSelection.pizza) {
+            if (foodSelection.pizza.hasOwnProperty(key)) {
+               const pizzaType = key;
+               const pizzaDetails = foodSelection.pizza[key];
+               const buttonClass = `pizza-${pizzaType}`;
+               const html = ` 
+                     <button class="${buttonClass}" onclick="addToOrder('${pizzaType}','${pizzaDetails.name}', ${pizzaDetails.price})">
+                     </button>`;
+               display.innerHTML += html;
+            }
+         }
+      } else if (food === 'burger') {
+         const display = document.querySelector('.displaymain');
+         display.innerHTML = '';
+
+         for (const key in foodSelection.burger) {
+            if (foodSelection.burger.hasOwnProperty(key)) {
+               const burgerType = key;
+               const burgerDetails = foodSelection.burger[key];
+               const buttonClass = `burger-${burgerType}`;
+               const html = `
+                  <button class="${buttonClass}" onclick="addToOrder('${burgerType}','${burgerDetails.name}', ${burgerDetails.price})">
+                  </button>`;
+               display.innerHTML += html;
+            }
+         }
+      } else if (food === 'fries') {
+         const display = document.querySelector('.displaymain');
+         display.innerHTML = '';
+
+         for (const key in foodSelection.fries) {
+            if (foodSelection.fries.hasOwnProperty(key)) {
+               const friesType = key;
+               const friesDetails = foodSelection.fries[key];
+               const buttonClass = `fries-${friesType}`;
+               const html = `
+                  <button class="${buttonClass}" onclick="addToOrder('${friesType}','${friesDetails.name}', ${friesDetails.price})">
+                  </button>`;
+               display.innerHTML += html;
+            }
+         }
+      } else if (food === 'steak') {
+         const display = document.querySelector('.displaymain');
+         display.innerHTML = '';
+
+         for (const key in foodSelection.steak) {
+            if (foodSelection.steak.hasOwnProperty(key)) {
+               const steakType = key;
+               const steakDetails = foodSelection.steak[key];
+               const buttonClass = `steak-${steakType}`;
+               const html = ` <button class="${buttonClass}" onclick="addToOrder('${steakType}','${steakDetails.name}', ${steakDetails.price})">
+                     </button>`;
+               display.innerHTML += html;
+            }
+         }
+      } else if (food === 'drinks') {
+         const display = document.querySelector('.displaymain');
+         display.innerHTML = '';
+
+         for (const key in foodSelection.drinks) {
+            if (foodSelection.drinks.hasOwnProperty(key)) {
+               const drinksType = key;
+               const drinksDetails = foodSelection.drinks[key];
+               const buttonClass = `drinks-${drinksType}`;
+               const html = `
+                  <button class="${buttonClass}" onclick="addToOrder('${drinksType}','${drinksDetails.name}', ${drinksDetails.price})">
+                  </button>`;
+               display.innerHTML += html;
+            }
+         }
+      } else if (food === 'dessert') {
+         const display = document.querySelector('.displaymain');
+         display.innerHTML = '';
+
+         for (const key in foodSelection.dessert) {
+            if (foodSelection.dessert.hasOwnProperty(key)) {
+               const dessertType = key;
+               const dessertDetails = foodSelection.dessert[key];
+               const buttonClass = `dessert-${dessertType}`;
+               const html = `
+                  <button class="${buttonClass}" onclick="addToOrder('${dessertType}','${dessertDetails.name}', ${dessertDetails.price})">
+                  </button>`;
+               display.innerHTML += html;
+            }
+         }
+      }
+   }
+
+   function addToOrder(id, name, price) {
+      if (!order[id]) {
+         order[id] = { qty: 0, amount: 0 };
+      }
+
+      order[id].qty += 1;
+      order[id].amount = order[id].qty * price;
+
+      const orderContainer = document.querySelector('.ordermain');
+      const existingItem = document.querySelector(`.orderitem[data-id="${id}"]`);
+
+      if (existingItem) {
+         const qtyElement = existingItem.querySelector('.qty');
+         const amountElement = existingItem.querySelector('.amount');
+         qtyElement.textContent =  `${order[id].qty} pcs`;
+         amountElement.textContent = '$' + order[id].amount.toFixed(2);
+      } else {
+         const newItem = document.createElement('div');
+         newItem.classList.add('orderitem');
+         newItem.setAttribute('data-id', id);
+
+         const itemName = document.createElement('p');
+         itemName.classList.add('foodname');
+         itemName.textContent = name;
+
+         const itemPrice = document.createElement('p');
+         itemPrice.classList.add('itemprice');
+         itemPrice.textContent = `$${order[id].amount}`;
+
+         const itemQty = document.createElement('p');
+         itemQty.classList.add('qty');
+         itemQty.textContent = `${order[id].qty} pcs`;
+
+         const itemAmount = document.createElement('p');
+         itemAmount.classList.add('amount');
+         itemAmount.textContent = '$' + order[id].amount.toFixed(2);
+
+         const removeButton = document.createElement('button');
+         removeButton.textContent = '-';
+         removeButton.classList.add('remove');
+         removeButton.addEventListener('click', function () {
+            removeOneFromOrder(id, price);
+         });
+
+         newItem.appendChild(itemName);
+         newItem.appendChild(itemPrice);
+         newItem.appendChild(itemQty);
+         newItem.appendChild(itemAmount);
+         newItem.appendChild(removeButton);
+         
+         orderContainer.appendChild(newItem);
+      }
+
+      let totalAmount = 0;
+      for (const key in order) {
+         totalAmount += order[key].amount;
+      }
+      document.getElementById('totalAmount').textContent = totalAmount.toFixed(2);
+
+   }
+
+   function removeOneFromOrder(id, price) {
+   if (order[id] && order[id].qty > 0) {
+      order[id].qty -= 1;
+      order[id].amount = order[id].qty * price;
+
+      const qtyElement = document.querySelector(`.orderitem[data-id="${id}"] .qty`);
+      const amountElement = document.querySelector(`.orderitem[data-id="${id}"] .amount`);
+
+      qtyElement.textContent =`${order[id].qty} pcs`;
+      amountElement.textContent = '$' + order[id].amount.toFixed(2);
+
+      if (order[id].qty === 0) {
+         const itemToRemove = document.querySelector(`.orderitem[data-id="${id}"]`);
+         itemToRemove.remove();
+         delete order[id];
+      }
+
+      let totalAmount = 0;
+      for (const key in order) {
+         totalAmount += order[key].amount;
+      }
+      document.getElementById('totalAmount').textContent = totalAmount.toFixed(2);
+   }
+   }
+
+   function searchItems() {
+    const searchInput = document.getElementById('searchInput');
+    const searchTerm = searchInput.value.trim().toLowerCase();
+
+    const display = document.querySelector('.displaymain');
+    display.innerHTML = ''; 
+
+    for (const category in foodSelection) {
+        if (foodSelection.hasOwnProperty(category)) {
+            for (const itemKey in foodSelection[category]) {
+                if (foodSelection[category].hasOwnProperty(itemKey)) {
+                    const item = foodSelection[category][itemKey];
+                    if (item.name.toLowerCase().includes(searchTerm)) {
+                        const buttonClass = `${category}-${itemKey}`;
+                        const html = `
+                            <button class="${buttonClass}" onclick="addToOrder('${itemKey}','${item.name}', ${item.price})">
+                                ${item.name} - $${item.price.toFixed(2)}
+                            </button>`;
+                        display.innerHTML += html;
+                    }
+                }
+            }
+        }
+    }
+}
+
+   const adImage = document.querySelector('.ad1');
+   const adImages = ['ad1.png', 'ad2.png']; // Add the paths to your images
+
+   let currentImageIndex = 0;
+
+   function changeAdImage() {
+      adImage.src = adImages[currentImageIndex];
+      currentImageIndex = (currentImageIndex + 1) % adImages.length;
+   }
+
+   setInterval(changeAdImage, 3000); // Change image every 3 seconds
+
+
+   </script>
+</body>
+</html>
