@@ -179,7 +179,7 @@ body {
    color: white;
 }
 
-.food:active {
+.food:visited {
    background-color: #333;
    color:white;
    transform:scale(1.1);
