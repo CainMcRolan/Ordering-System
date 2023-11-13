@@ -231,99 +231,122 @@
 
    const order = {};
 
+function pickOrder(food) {
+   if (food === "pizza") {
+      const display = document.querySelector('.displaymain');
+      display.innerHTML = '';
 
-   function pickOrder(food) {
-      if (food === "pizza") { 
-         const display = document.querySelector('.displaymain');
-         display.innerHTML = '';
+      const sortedPizza = Object.keys(foodSelection.pizza).sort((a, b) => {
+         const itemA = foodSelection.pizza[a].name.toLowerCase();
+         const itemB = foodSelection.pizza[b].name.toLowerCase();
+         return itemA.localeCompare(itemB);
+      });
 
-         for (const key in foodSelection.pizza) {
-            if (foodSelection.pizza.hasOwnProperty(key)) {
-               const pizzaType = key;
-               const pizzaDetails = foodSelection.pizza[key];
-               const buttonClass = `pizza-${pizzaType}`;
-               const html = ` 
-                     <button class="${buttonClass}" onclick="addToOrder('${pizzaType}','${pizzaDetails.name}', ${pizzaDetails.price})">
-                     </button>`;
-               display.innerHTML += html;
-            }
-         }
-      } else if (food === 'burger') {
-         const display = document.querySelector('.displaymain');
-         display.innerHTML = '';
+      for (const key of sortedPizza) {
+         const pizzaType = key;
+         const pizzaDetails = foodSelection.pizza[key];
+         const buttonClass = `pizza-${pizzaType}`;
+         const html = ` 
+               <button class="${buttonClass}" onclick="addToOrder('${pizzaType}','${pizzaDetails.name}', ${pizzaDetails.price})">
+               </button>`;
+         display.innerHTML += html;
+      }
+   } else if (food === 'burger') {
+      const display = document.querySelector('.displaymain');
+      display.innerHTML = '';
 
-         for (const key in foodSelection.burger) {
-            if (foodSelection.burger.hasOwnProperty(key)) {
-               const burgerType = key;
-               const burgerDetails = foodSelection.burger[key];
-               const buttonClass = `burger-${burgerType}`;
-               const html = `
-                  <button class="${buttonClass}" onclick="addToOrder('${burgerType}','${burgerDetails.name}', ${burgerDetails.price})">
-                  </button>`;
-               display.innerHTML += html;
-            }
-         }
-      } else if (food === 'fries') {
-         const display = document.querySelector('.displaymain');
-         display.innerHTML = '';
+      const sortedBurger = Object.keys(foodSelection.burger).sort((a, b) => {
+         const itemA = foodSelection.burger[a].name.toLowerCase();
+         const itemB = foodSelection.burger[b].name.toLowerCase();
+         return itemA.localeCompare(itemB);
+      });
 
-         for (const key in foodSelection.fries) {
-            if (foodSelection.fries.hasOwnProperty(key)) {
-               const friesType = key;
-               const friesDetails = foodSelection.fries[key];
-               const buttonClass = `fries-${friesType}`;
-               const html = `
-                  <button class="${buttonClass}" onclick="addToOrder('${friesType}','${friesDetails.name}', ${friesDetails.price})">
-                  </button>`;
-               display.innerHTML += html;
-            }
-         }
-      } else if (food === 'steak') {
-         const display = document.querySelector('.displaymain');
-         display.innerHTML = '';
+      for (const key of sortedBurger) {
+         const burgerType = key;
+         const burgerDetails = foodSelection.burger[key];
+         const buttonClass = `burger-${burgerType}`;
+         const html = `
+            <button class="${buttonClass}" onclick="addToOrder('${burgerType}','${burgerDetails.name}', ${burgerDetails.price})">
+            </button>`;
+         display.innerHTML += html;
+      }
+   } else if (food === 'fries') {
+      const display = document.querySelector('.displaymain');
+      display.innerHTML = '';
 
-         for (const key in foodSelection.steak) {
-            if (foodSelection.steak.hasOwnProperty(key)) {
-               const steakType = key;
-               const steakDetails = foodSelection.steak[key];
-               const buttonClass = `steak-${steakType}`;
-               const html = ` <button class="${buttonClass}" onclick="addToOrder('${steakType}','${steakDetails.name}', ${steakDetails.price})">
-                     </button>`;
-               display.innerHTML += html;
-            }
-         }
-      } else if (food === 'drinks') {
-         const display = document.querySelector('.displaymain');
-         display.innerHTML = '';
+      const sortedFries = Object.keys(foodSelection.fries).sort((a, b) => {
+         const itemA = foodSelection.fries[a].name.toLowerCase();
+         const itemB = foodSelection.fries[b].name.toLowerCase();
+         return itemA.localeCompare(itemB);
+      });
 
-         for (const key in foodSelection.drinks) {
-            if (foodSelection.drinks.hasOwnProperty(key)) {
-               const drinksType = key;
-               const drinksDetails = foodSelection.drinks[key];
-               const buttonClass = `drinks-${drinksType}`;
-               const html = `
-                  <button class="${buttonClass}" onclick="addToOrder('${drinksType}','${drinksDetails.name}', ${drinksDetails.price})">
-                  </button>`;
-               display.innerHTML += html;
-            }
-         }
-      } else if (food === 'dessert') {
-         const display = document.querySelector('.displaymain');
-         display.innerHTML = '';
+      for (const key of sortedFries) {
+         const friesType = key;
+         const friesDetails = foodSelection.fries[key];
+         const buttonClass = `fries-${friesType}`;
+         const html = `
+            <button class="${buttonClass}" onclick="addToOrder('${friesType}','${friesDetails.name}', ${friesDetails.price})">
+            </button>`;
+         display.innerHTML += html;
+      }
+   } else if (food === 'steak') {
+      const display = document.querySelector('.displaymain');
+      display.innerHTML = '';
 
-         for (const key in foodSelection.dessert) {
-            if (foodSelection.dessert.hasOwnProperty(key)) {
-               const dessertType = key;
-               const dessertDetails = foodSelection.dessert[key];
-               const buttonClass = `dessert-${dessertType}`;
-               const html = `
-                  <button class="${buttonClass}" onclick="addToOrder('${dessertType}','${dessertDetails.name}', ${dessertDetails.price})">
-                  </button>`;
-               display.innerHTML += html;
-            }
-         }
+      const sortedSteak = Object.keys(foodSelection.steak).sort((a, b) => {
+         const itemA = foodSelection.steak[a].name.toLowerCase();
+         const itemB = foodSelection.steak[b].name.toLowerCase();
+         return itemA.localeCompare(itemB);
+      });
+
+      for (const key of sortedSteak) {
+         const steakType = key;
+         const steakDetails = foodSelection.steak[key];
+         const buttonClass = `steak-${steakType}`;
+         const html = ` <button class="${buttonClass}" onclick="addToOrder('${steakType}','${steakDetails.name}', ${steakDetails.price})">
+               </button>`;
+         display.innerHTML += html;
+      }
+   } else if (food === 'drinks') {
+      const display = document.querySelector('.displaymain');
+      display.innerHTML = '';
+
+      const sortedDrinks = Object.keys(foodSelection.drinks).sort((a, b) => {
+         const itemA = foodSelection.drinks[a].name.toLowerCase();
+         const itemB = foodSelection.drinks[b].name.toLowerCase();
+         return itemA.localeCompare(itemB);
+      });
+
+      for (const key of sortedDrinks) {
+         const drinksType = key;
+         const drinksDetails = foodSelection.drinks[key];
+         const buttonClass = `drinks-${drinksType}`;
+         const html = `
+            <button class="${buttonClass}" onclick="addToOrder('${drinksType}','${drinksDetails.name}', ${drinksDetails.price})">
+            </button>`;
+         display.innerHTML += html;
+      }
+   } else if (food === 'dessert') {
+      const display = document.querySelector('.displaymain');
+      display.innerHTML = '';
+
+      const sortedDessert = Object.keys(foodSelection.dessert).sort((a, b) => {
+         const itemA = foodSelection.dessert[a].name.toLowerCase();
+         const itemB = foodSelection.dessert[b].name.toLowerCase();
+         return itemA.localeCompare(itemB);
+      });
+
+      for (const key of sortedDessert) {
+         const dessertType = key;
+         const dessertDetails = foodSelection.dessert[key];
+         const buttonClass = `dessert-${dessertType}`;
+         const html = `
+            <button class="${buttonClass}" onclick="addToOrder('${dessertType}','${dessertDetails.name}', ${dessertDetails.price})">
+            </button>`;
+         display.innerHTML += html;
       }
    }
+}
 
    function addToOrder(id, name, price) {
       if (!order[id]) {
