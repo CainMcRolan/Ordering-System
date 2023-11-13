@@ -179,6 +179,12 @@ body {
    color: white;
 }
 
+.food:active {
+   background-color: #333;
+   color:white;
+   transform:scale(1.1);
+}
+
 .menu {
    width: 190px;
    background-color: rgb(255, 255, 255);
